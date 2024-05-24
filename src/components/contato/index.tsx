@@ -8,7 +8,7 @@ const DetalheContatoComponent = () => {
             <div id="contato">
                 <h3>Contato</h3>   
                 <p>Nome: Carlos Eduardo</p>
-                <p>Email: { Contato.email} </p>
+                <p>Email: <a href={"mailto:" + Contato.email}>{Contato.email}</a></p>
                 <p>Telefone: {Contato.telefone}</p>
                 <p>
                     <img src={githubIcon} alt='github icon' width={16} height={16} />
