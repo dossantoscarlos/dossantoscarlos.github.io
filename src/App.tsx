@@ -1,19 +1,26 @@
-// import AboutComponent from "./components/about"
-// import DetalheContatoComponent from "./components/contato"
-// import ProjetoComponent from "./components/projeto"
-import Engrenagem from "./assets/engrenagem.gif"
+import Navbar from "./components/navbar";
+import AboutComponent from "./components/about";
+import ProjetoComponent from "./components/projeto";
+import DetalheContatoComponent from "./components/contato";
+import { Perfil } from "./structs/index";
 
-function App () {
-  return( 
-    <>
-      {/* <AboutComponent></AboutComponent>
-      <ProjetoComponent></ProjetoComponent>
-      <DetalheContatoComponent></DetalheContatoComponent> */}
-      <div>
-        <img src={Engrenagem} alt="engrenagem" width={400}/><h1>Em manutenção</h1>
-      </div>
-    </>
-  )
+function App() {
+    return (
+        <>
+            <Navbar />
+            <main>
+                <AboutComponent />
+                <ProjetoComponent />
+                <DetalheContatoComponent />
+            </main>
+            <footer className="footer">
+                <div className="container">
+                    <p>© {new Date().getFullYear()} {Perfil.nome} — {Perfil.cargo}</p>
+                    <p>Feito com React, TypeScript e muito café.</p>
+                </div>
+            </footer>
+        </>
+    );
 }
 
-export default App
+export default App;
